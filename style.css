@@ -1,0 +1,495 @@
+:root {
+  --ink: #172033;
+  --muted: #647085;
+  --surface: #ffffff;
+  --background: #f6f8fc;
+  --line: #e3e8f1;
+  --blue: #4263eb;
+  --blue-dark: #314dca;
+  --shadow: 0 14px 35px rgba(23, 32, 51, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  color: var(--ink);
+  background: var(--background);
+  font-family: "DM Sans", Arial, sans-serif;
+  line-height: 1.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: min(1120px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.site-header {
+  background: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid var(--line);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.brand-mark {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  color: white;
+  background: var(--blue);
+  border-radius: 9px;
+  font-size: 1.35rem;
+}
+
+.nav-link {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.nav-link:hover {
+  color: var(--blue);
+}
+
+.brand:focus-visible,
+.nav-link:focus-visible,
+.back-link:focus-visible,
+.button:focus-visible {
+  outline: 3px solid rgba(66, 99, 235, 0.5);
+  outline-offset: 3px;
+}
+
+.hero {
+  padding: 96px 0 88px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--blue);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+}
+
+h1 {
+  max-width: 680px;
+  margin: 0 auto 18px;
+  font-size: clamp(2.35rem, 6vw, 4.35rem);
+  letter-spacing: -0.055em;
+}
+
+.hero-text {
+  max-width: 560px;
+  margin: 0 auto 30px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px 20px;
+  color: white;
+  background: var(--blue);
+  border-radius: 10px;
+  font-weight: 700;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.button:hover {
+  background: var(--blue-dark);
+  transform: translateY(-2px);
+}
+
+.calculators-section {
+  padding: 72px 0 88px;
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  letter-spacing: -0.04em;
+}
+
+.section-heading > p {
+  max-width: 300px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.calculator-card {
+  min-height: 230px;
+  padding: 26px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(23, 32, 51, 0.02);
+  transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.calculator-card:hover,
+.calculator-card:focus-visible {
+  border-color: #b8c5ff;
+  box-shadow: var(--shadow);
+  outline: none;
+  transform: translateY(-4px);
+}
+
+.card-icon {
+  display: grid;
+  width: 45px;
+  height: 45px;
+  margin-bottom: 24px;
+  place-items: center;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.percentage .card-icon { color: #3556d4; background: #e9edff; }
+.age .card-icon { color: #9d5e00; background: #fff0d4; }
+.discount .card-icon { color: #087d5b; background: #dff8ee; }
+.profit .card-icon { color: #a34273; background: #ffebf4; }
+.date .card-icon { color: #6e4bb2; background: #efeaff; }
+
+h3 {
+  margin-bottom: 9px;
+  font-size: 1.15rem;
+  letter-spacing: -0.02em;
+}
+
+.calculator-card p {
+  margin-bottom: 18px;
+  color: var(--muted);
+}
+
+.card-link {
+  color: var(--blue);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.site-footer {
+  padding: 27px 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+.calculator-page {
+  padding: 70px 0 88px;
+}
+
+.calculator-intro {
+  max-width: 760px;
+  text-align: center;
+}
+
+.calculator-intro h1 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 46px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.back-link:hover {
+  color: var(--blue);
+}
+
+.calculator-area {
+  max-width: 760px;
+}
+
+.calculator-panel {
+  padding: 36px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+.panel-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.percentage-icon {
+  flex: 0 0 auto;
+  margin: 0;
+  color: #3556d4;
+  background: #e9edff;
+}
+
+.age-icon {
+  flex: 0 0 auto;
+  margin: 0;
+  color: #9d5e00;
+  background: #fff0d4;
+}
+
+.discount-icon {
+  flex: 0 0 auto;
+  margin: 0;
+  color: #087d5b;
+  background: #dff8ee;
+}
+
+.profit-icon {
+  flex: 0 0 auto;
+  margin: 0;
+  color: #a34273;
+  background: #ffebf4;
+}
+
+.date-icon {
+  flex: 0 0 auto;
+  margin: 0;
+  color: #6e4bb2;
+  background: #efeaff;
+}
+
+.panel-heading h2 {
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+}
+
+.panel-heading p {
+  margin-bottom: 0;
+  color: var(--muted);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-grid-single {
+  grid-template-columns: minmax(0, 350px);
+}
+
+.field-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.field-group input {
+  width: 100%;
+  min-height: 48px;
+  padding: 11px 13px;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid #cbd4e1;
+  border-radius: 9px;
+  font: inherit;
+}
+
+.field-group input:focus {
+  border-color: var(--blue);
+  outline: 3px solid rgba(66, 99, 235, 0.16);
+}
+
+.input-with-suffix {
+  position: relative;
+}
+
+.input-with-suffix input {
+  padding-right: 40px;
+}
+
+.input-with-suffix span {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  color: var(--muted);
+  font-weight: 700;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.button-secondary {
+  color: var(--ink);
+  background: #edf1f7;
+}
+
+.button-secondary:hover {
+  background: #e1e7f0;
+}
+
+.result {
+  margin-top: 28px;
+  padding: 18px;
+  border: 1px solid #cbd6ff;
+  border-radius: 10px;
+  color: #243c9b;
+  background: #eef1ff;
+  font-size: 1.05rem;
+  white-space: pre-line;
+}
+
+.result strong {
+  color: var(--ink);
+}
+
+.result.error {
+  border-color: #f4c5c5;
+  color: #9d2727;
+  background: #fff0f0;
+}
+
+@media (max-width: 800px) {
+  .calculator-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    width: min(100% - 32px, 1120px);
+  }
+
+  .navigation {
+    min-height: 64px;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+
+  .hero {
+    padding: 70px 0 64px;
+  }
+
+  .calculator-page {
+    padding: 48px 0 64px;
+  }
+
+  .back-link {
+    margin-bottom: 34px;
+  }
+
+  .calculator-panel {
+    padding: 24px 20px;
+  }
+
+  .panel-heading {
+    gap: 14px;
+    margin-bottom: 26px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .section-heading {
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  .section-heading > p {
+    margin-top: 12px;
+  }
+
+  .calculators-section {
+    padding: 56px 0 64px;
+  }
+
+  .calculator-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .calculator-card {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .card-icon {
+    margin-bottom: 18px;
+  }
+}

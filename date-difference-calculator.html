@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Calculate the calendar days between two dates with Mini Calculator Hub." />
+    <title>Date Difference Calculator | Mini Calculator Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navigation">
+        <a class="brand" href="index.html" aria-label="Mini Calculator Hub home">
+          <span class="brand-mark" aria-hidden="true">+</span>
+          <span>Mini Calculator Hub</span>
+        </a>
+        <a class="nav-link" href="index.html">Back to Home</a>
+      </div>
+    </header>
+
+    <main class="calculator-page">
+      <section class="calculator-intro container" aria-labelledby="page-title">
+        <a class="back-link" href="index.html"><span aria-hidden="true">←</span> Back to Home</a>
+        <p class="eyebrow">Everyday maths</p>
+        <h1 id="page-title">Date Difference Calculator</h1>
+        <p class="hero-text">Count the calendar days from one date to another.</p>
+      </section>
+
+      <section class="calculator-area container" aria-labelledby="calculator-title">
+        <div class="calculator-panel">
+          <div class="panel-heading">
+            <span class="card-icon date-icon" aria-hidden="true">□</span>
+            <div>
+              <h2 id="calculator-title">Choose two dates</h2>
+              <p>The start date is excluded. For example, January 1 to January 11 is 10 days.</p>
+            </div>
+          </div>
+
+          <form id="date-difference-form" novalidate>
+            <div class="form-grid">
+              <div class="field-group">
+                <label for="start-date">Start Date</label>
+                <input id="start-date" name="start-date" type="date" required />
+              </div>
+              <div class="field-group">
+                <label for="end-date">End Date</label>
+                <input id="end-date" name="end-date" type="date" required />
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="button" type="submit">Calculate</button>
+              <button class="button button-secondary" type="reset">Reset</button>
+            </div>
+          </form>
+
+          <div id="date-difference-result" class="result" role="status" aria-live="polite" hidden></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Mini Calculator Hub <span aria-hidden="true">·</span> Simple answers, clearly calculated.</p>
+      </div>
+    </footer>
+  </body>
+</html>

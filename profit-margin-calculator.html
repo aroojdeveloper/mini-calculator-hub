@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Calculate profit, loss, and profit margin with Mini Calculator Hub." />
+    <title>Profit Margin Calculator | Mini Calculator Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navigation">
+        <a class="brand" href="index.html" aria-label="Mini Calculator Hub home">
+          <span class="brand-mark" aria-hidden="true">+</span>
+          <span>Mini Calculator Hub</span>
+        </a>
+        <a class="nav-link" href="index.html">Back to Home</a>
+      </div>
+    </header>
+
+    <main class="calculator-page">
+      <section class="calculator-intro container" aria-labelledby="page-title">
+        <a class="back-link" href="index.html"><span aria-hidden="true">←</span> Back to Home</a>
+        <p class="eyebrow">Everyday maths</p>
+        <h1 id="page-title">Profit Margin Calculator</h1>
+        <p class="hero-text">See whether a sale makes a profit or loss, and understand the margin.</p>
+      </section>
+
+      <section class="calculator-area container" aria-labelledby="calculator-title">
+        <div class="calculator-panel">
+          <div class="panel-heading">
+            <span class="card-icon profit-icon" aria-hidden="true">↗</span>
+            <div>
+              <h2 id="calculator-title">Compare your prices</h2>
+              <p>For example, a cost price of 80 and a selling price of 100 gives a profit of 20 and a 20% margin.</p>
+            </div>
+          </div>
+
+          <form id="profit-margin-form" novalidate>
+            <div class="form-grid">
+              <div class="field-group">
+                <label for="cost-price">Cost Price</label>
+                <input id="cost-price" name="cost-price" type="number" min="0" step="any" placeholder="e.g. 80" inputmode="decimal" required />
+              </div>
+              <div class="field-group">
+                <label for="selling-price">Selling Price</label>
+                <input id="selling-price" name="selling-price" type="number" min="0" step="any" placeholder="e.g. 100" inputmode="decimal" required />
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button class="button" type="submit">Calculate</button>
+              <button class="button button-secondary" type="reset">Reset</button>
+            </div>
+          </form>
+
+          <div id="profit-margin-result" class="result" role="status" aria-live="polite" hidden></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Mini Calculator Hub <span aria-hidden="true">·</span> Simple answers, clearly calculated.</p>
+      </div>
+    </footer>
+  </body>
+</html>

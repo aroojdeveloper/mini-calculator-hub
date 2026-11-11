@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Mini Calculator Hub brings everyday calculations together in one simple place."
+    />
+    <title>Mini Calculator Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container navigation">
+        <a class="brand" href="index.html" aria-label="Mini Calculator Hub home">
+          <span class="brand-mark" aria-hidden="true">+</span>
+          <span>Mini Calculator Hub</span>
+        </a>
+        <a class="nav-link" href="#calculators">Calculators</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero container" aria-labelledby="page-title">
+        <p class="eyebrow">Simple tools for everyday maths</p>
+        <h1 id="page-title">Calculate with confidence.</h1>
+        <p class="hero-text">
+          Pick a calculator below for quick, clear answers to your everyday questions.
+        </p>
+        <a class="button" href="#calculators">Explore calculators <span aria-hidden="true">↓</span></a>
+      </section>
+
+      <section class="calculators-section" id="calculators" aria-labelledby="calculators-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Calculator collection</p>
+              <h2 id="calculators-title">Find the tool you need</h2>
+            </div>
+            <p>Five focused calculators, designed to stay straightforward.</p>
+          </div>
+
+          <div class="calculator-grid">
+            <a class="calculator-card percentage" href="percentage-calculator.html" aria-label="Open Percentage Calculator">
+              <span class="card-icon" aria-hidden="true">%</span>
+              <h3>Percentage Calculator</h3>
+              <p>Quickly find a percentage of any number.</p>
+              <span class="card-link">Open calculator <span aria-hidden="true">→</span></span>
+            </a>
+
+            <a class="calculator-card age" href="age-calculator.html" aria-label="Open Age Calculator">
+              <span class="card-icon" aria-hidden="true">◷</span>
+              <h3>Age Calculator</h3>
+              <p>See your age in years, months, and days.</p>
+              <span class="card-link">Open calculator <span aria-hidden="true">→</span></span>
+            </a>
+
+            <a class="calculator-card discount" href="discount-calculator.html" aria-label="Open Discount Calculator">
+              <span class="card-icon" aria-hidden="true">⌁</span>
+              <h3>Discount Calculator</h3>
+              <p>Work out savings and your final price.</p>
+              <span class="card-link">Open calculator <span aria-hidden="true">→</span></span>
+            </a>
+
+            <a class="calculator-card profit" href="profit-margin-calculator.html" aria-label="Open Profit Margin Calculator">
+              <span class="card-icon" aria-hidden="true">↗</span>
+              <h3>Profit Margin Calculator</h3>
+              <p>Understand profit, loss, and margins.</p>
+              <span class="card-link">Open calculator <span aria-hidden="true">→</span></span>
+            </a>
+
+            <a class="calculator-card date" href="date-difference-calculator.html" aria-label="Open Date Difference Calculator">
+              <span class="card-icon" aria-hidden="true">□</span>
+              <h3>Date Difference Calculator</h3>
+              <p>Count the calendar days between dates.</p>
+              <span class="card-link">Open calculator <span aria-hidden="true">→</span></span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>Mini Calculator Hub <span aria-hidden="true">·</span> Simple answers, clearly calculated.</p>
+      </div>
+    </footer>
+  </body>
+</html>
